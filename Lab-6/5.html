@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5.html</title>
+</head>
+<body style="color: white;background: orange;text-align: center;" id="body">
+	<h1>Press any key on Keyboard</h1>
+	<input type="text" onkeyup="up()" id="input" onkeydown="down()">
+	<br>
+	<br>
+	Current key presses is <span id="char"></span><br>
+	Key Code is <span id="code"></span> <br>
+	Vowel pressed : <span id="vowel" style="font-weight: bolder;"></span>
+
+	<script>
+		function up(){
+			var input=document.getElementById('input').value
+			input=input.charAt(input.length-1)
+			document.getElementById('char').innerHTML='\''+input+'\''
+			document.getElementById('code').innerHTML=document.getElementById('char').innerHTML.charCodeAt(1)
+			if (input=='a' || input=='e' || input=='i' || input=='o'||input=='u') {
+				document.getElementById('vowel').innerHTML='True'
+			}
+			else{
+				document.getElementById('vowel').innerHTML='False'
+			}
+			document.getElementById('body').style.background="blue"
+		}
+
+		function down(){
+			document.getElementById('body').style.background="orange"
+		}
+	</script>
+</body>
+</html>

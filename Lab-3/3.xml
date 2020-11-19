@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+<!DOCTYPE BookCollection [
+
+	<!ELEMENT BookCollection (Book+)>
+	<!ELEMENT Book (name,auther,ISBN-number,quantity)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT auther (#PCDATA)>
+	<!ELEMENT ISBN-number (#PCDATA)>
+	<!ELEMENT quantity (#PCDATA)>
+]>
+
+
+<BookCollection>
+		
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		
+</BookCollection>

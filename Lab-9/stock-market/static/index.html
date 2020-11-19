@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>stock-market page</title>
+	<style>
+		td{
+			padding: 30px;
+		}
+		th{
+			padding: 30px;
+		}
+	</style>
+	
+</head>
+<body style="margin: 0;padding: 0;font-size: 25px;width: 100vw;height: 100vh;">
+
+	
+	<div style="position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+
+		<table border="1" id="table">
+			
+
+		</table>
+		
+	</div>
+
+<script src="jquery-1.12.4.min.js"></script>
+
+	<script>
+		function update(){
+			$.ajax({
+				type:'GET',
+				contentType :'application/json',
+				url:'http://localhost:12349/',
+				success:function(data){
+					if (data.length!=0) {
+						$('#table').html('<tr>				<th colspan="5" style="background: blue;color: white;">Stock-Market</th>			</tr>			<tr>				<th>Company name</th>				<th>Company Code</th>				<th>Lowest Value</th>				<th>Highest Value</th>				<th>Current Value</th>			</tr>')
+			for(var i=0;i<data.length;i++)
+			{
+				$('#table').append('<tr align="center">				<td>'+data[i].name+'</td>				<td>'+data[i].code+'</td>				<td style="color: red;">'+data[i].lprice+'</td>				<td style="color: green;">'+data[i].hprice+'</td>				<td style="color: blue;">'+data[i].cprice+'</td>		</tr>')
+			}
+					}
+				},
+
+			})
+		}
+		$(document).ready(function(){
+			console.log('hello world')
+			setInterval(update,1000)
+		})
+		
+	</script>
+</body>
+</html>

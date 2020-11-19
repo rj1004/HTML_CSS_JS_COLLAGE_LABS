@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+<!DOCTYPE PlayerCollection [
+
+	<!ELEMENT PlayerCollection (Player+)>
+	<!ELEMENT Player (player-name,player-age,betting-average,highest-score)>
+	<!ELEMENT player-name (#PCDATA)>
+	<!ELEMENT player-age (#PCDATA)>
+	<!ELEMENT betting-average (#PCDATA)>
+	<!ELEMENT highest-score (#PCDATA)>
+]>
+
+
+<PlayerCollection>
+		
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+		
+</PlayerCollection>

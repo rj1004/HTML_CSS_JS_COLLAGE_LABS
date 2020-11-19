@@ -1,0 +1,54 @@
+<?xml version="1.0"  encoding="UTF-8"?>
+
+
+<!DOCTYPE Hotel [
+	<!ELEMENT Hotel (menu)>
+	<!ELEMENT menu (food)>
+	<!ELEMENT food (name,price,description,calories)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT price (#PCDATA)>
+	<!ELEMENT description (#PCDATA)>
+	<!ELEMENT calories (#PCDATA)>
+
+]>
+
+
+<Hotel>
+	
+	<menu>
+		<food>
+			<name> Pizza </name>
+			<price> 230$ </price>
+			<description> panner pizza </description>
+			<calories> 100 </calories>
+		</food>
+
+		<food>
+			<name> Pizza </name>
+			<price> 230$ </price>
+			<description> panner pizza </description>
+			<calories> 100 </calories>
+		</food>
+
+		<food>
+			<name> Pizza </name>
+			<price> 230$ </price>
+			<description> panner pizza </description>
+			<calories> 100 </calories>
+		</food>
+
+		<food>
+			<name> Pizza </name>
+			<price> 230$ </price>
+			<description> panner pizza </description>
+			<calories> 100 </calories>
+		</food>
+
+		<food>
+			<name> Pizza </name>
+			<price> 230$ </price>
+			<description> panner pizza </description>
+			<calories> 100 </calories>
+		</food>
+	</menu>
+</Hotel>

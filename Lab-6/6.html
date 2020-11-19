@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>6.html</title>
+
+	<style>
+		div{
+
+		}
+	</style>
+</head>
+<body style="background-image: url(back.jpg);background-size: cover;height: 100vh;margin: 0;padding: 0">
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:10%;top: -5%" id="item">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:15%;top: -5%" id="item1">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:25%;top: -5%" id="item3">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:20%;top: -5%" id="item2">
+		
+	</div>
+	
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:45%;top: -5%" id="item7">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:30%;top: -5%" id="item4">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:40%;top: -5%" id="item6">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:35%;top: -5%" id="item5">
+		
+	</div>
+	
+	
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:50%;top: -5%" id="item8">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:55%;top: -5%" id="item9">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:75%;top: -5%" id="item13">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:60%;top: -5%" id="item10">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:65%;top: -5%" id="item11">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:90%;top: -5%" id="item16">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:70%;top: -5%" id="item12">
+		
+	</div>
+	
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:80%;top: -5%" id="item14">
+		
+	</div>
+	<div style="position: absolute;width: 20px;height: 20px;background: white;border-radius: 10px;left:85%;top: -5%" id="item15">
+		
+	</div>
+	
+	
+	<script>
+		var pos=0;
+		setInterval(fall,50,document.getElementById('item'))
+		setInterval(fall,50,document.getElementById('item1'))
+		setInterval(fall,50,document.getElementById('item2'))
+		setInterval(fall,50,document.getElementById('item3'))
+		setInterval(fall,50,document.getElementById('item4'))
+		setInterval(fall,50,document.getElementById('item5'))
+		setInterval(fall,50,document.getElementById('item6'))
+		setInterval(fall,50,document.getElementById('item7'))
+		setInterval(fall,50,document.getElementById('item8'))
+		setInterval(fall,50,document.getElementById('item9'))
+		setInterval(fall,50,document.getElementById('item10'))
+		setInterval(fall,50,document.getElementById('item11'))
+		setInterval(fall,50,document.getElementById('item12'))
+		setInterval(fall,50,document.getElementById('item13'))
+		setInterval(fall,50,document.getElementById('item14'))
+		setInterval(fall,50,document.getElementById('item15'))
+		setInterval(fall,50,document.getElementById('item16'))
+
+		function fall(e){
+			if (pos==90) {
+				pos=0
+				e.style.top='0%'
+			}
+			else{
+				pos=pos+1
+				var current=e.style.top.toString();
+				current=current.slice(0,current.length-1)
+				
+				var next=parseInt(current)+1;
+				console.log(next)
+				e.style.top=next+'%'
+
+				
+			}
+		}
+	</script>
+</body>
+</html>

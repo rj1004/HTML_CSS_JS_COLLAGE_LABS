@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl5.xsl"?>
+<BookCollection>
+		
+		<Book>
+			<name>ert fgd</name>
+			<auther>dgf sim</auther>
+			<ISBN-number>12314364</ISBN-number>
+			<quantity>1</quantity>
+		</Book>
+
+
+		<Book>
+			<name>xxv cxv</name>
+			<auther>marc dfg</auther>
+			<ISBN-number>54612314</ISBN-number>
+			<quantity>17</quantity>
+		</Book>
+
+		<Book>
+			<name>Dxvcn</name>
+			<auther>er fdg</auther>
+			<ISBN-number>3612314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		<Book>
+			<name>Dxcvg</name>
+			<auther>hggf rtet</auther>
+			<ISBN-number>15232314</ISBN-number>
+			<quantity>20</quantity>
+		</Book>
+
+		
+</BookCollection>

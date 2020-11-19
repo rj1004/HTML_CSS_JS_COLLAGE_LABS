@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xsl4.xsl"?>
+
+	<Products>
+		<p>
+			<title>abc</title>
+			<price>500 </price>
+		</p>
+		<p>
+			<title>abcfd</title>
+			<price>200 </price>
+		</p>
+		<p>
+			<title>abasc</title>
+			<price>600 </price>
+		</p>
+		<p>
+			<title>agfbc</title>
+			<price>270 </price>
+		</p>
+	</Products>

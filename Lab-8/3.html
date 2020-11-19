@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div style="margin: 50px;background: red;width: 130px;height: 130px;position: relative;" id="hi">
+		
+	</div>
+	<button onclick="move()">
+		Click to apply opacity:0.4, height:500px, width:500px.
+	</button>
+
+	<script>
+		function move(){
+			$('#hi').animate({opacity:'0.4', height:'500px', width:'500px'})
+		}
+	</script>
+</body>
+</html>

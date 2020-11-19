@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4.html</title>
+</head>
+<body>
+	<p>Enter text</p>
+	<input type="text" id="q">
+	<button onclick="show()">Submit</button>
+	<p id="ans"></p>
+
+
+
+	<script>
+		function show(){
+			var q=document.getElementById('q').value
+			var ans=document.getElementById('ans')
+
+			var first=q.indexOf('a')
+			var last=q.lastIndexOf('a')
+			if (first!=-1 && last!=-1) {
+				var string=q.slice(first+1,last) 
+				ans.innerHTML='<p>first occurence of \' a \' is '+first+'</p>'+
+				'<p>last occurence of \' a \' is '+last+'</p>'+
+				'<p>String is :  \''+string+'\'</p>'
+			}
+			else{
+				var string=''
+				ans.innerHTML='\' a \' is not in your string.'
+			}
+			
+
+
+		}
+	</script>	
+</body>
+</html>

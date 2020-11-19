@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1.html</title>
+</head>
+<body>
+
+	
+
+	<video src="VID-20200430-WA0000.mp4" id="video" height="300"></video>
+	<br>
+	<button onclick="play()">Play</button>
+	<button onclick="pause()">Pause</button>
+
+	<button onclick="small()">Small</button>
+	<button onclick="normal()">Normal</button>
+	<button onclick="large()">Large</button>
+	
+	<script>
+		var video=document.getElementById('video');
+		
+		function play(){
+			video.play();
+		}
+
+		function pause(){
+			video.pause();
+		}
+
+		function small(){
+			video.height='100'
+		}
+
+		function normal(){
+			video.height='300';
+		}
+
+		function large(){
+			video.height='500'
+		}
+
+
+		
+	</script>
+</body>
+</html>

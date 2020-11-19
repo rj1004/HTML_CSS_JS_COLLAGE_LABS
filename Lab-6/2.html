@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>2.html</title>
+</head>
+<body>
+
+	<h3>Type Writer Effect</h3>
+	<button onclick="effect()">Click</button>
+	<p id="text"></p>
+	
+
+	<script>
+		var t='Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do 	eiusmod tempor incididunt ut labore et dolore magna aliqua.Aut dolor id. Sint aliquam consequatur ex ex labore. Et quis qui dolor nulla dolores neque. Aspernatur consectetur  omnis numquam quaerat. Sed fugiat nisi. Officiis veniam molestiae. Et vel ut quidem alias veritatis repudiandae ut fugit. Est ut eligendi aspernatur nulla voluptates veniam iusto vel quisquam. Fugit ut maxime incidunt accusantium totam repellendus eum error. Et repudiandae eum iste qui et ut ab alias.'
+		var text=document.getElementById('text');
+		var pointer=0;
+		console.log()
+		function effect(){
+	
+			if (pointer< t.length) {
+				text.innerHTML=text.innerHTML + t.charAt(pointer++)
+				setTimeout(effect,50)
+			}
+		}
+	</script>	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BookCollection xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="schema1.xsd">
+		
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		<Book>
+			<name>DR amin</name>
+			<auther>marc sim</auther>
+			<ISBN-number>12314</ISBN-number>
+			<quantity>10</quantity>
+		</Book>
+
+		
+</BookCollection>

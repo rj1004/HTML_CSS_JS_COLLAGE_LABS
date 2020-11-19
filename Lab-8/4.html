@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>4</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+	<div style="margin: 50px;background: red;position: relative;padding: 30px;" id="hi">
+		<p style="color: white;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deserunt nihil odio, non deleniti accusantium qui labore quo commodi debitis quidem velit aliquam laboriosam sequi repudiandae mollitia rem temporibus consectetur. Neque.</p>
+	</div>
+	<button onclick="move()">
+		Click to apply font-size of a div element to 100 pixels..
+	</button>
+
+	<script>
+		function move(){
+			$('#hi p').animate({fontSize:'100px'})
+		}
+	</script>
+</body>
+</html>

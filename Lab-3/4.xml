@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+
+
+<!DOCTYPE StudentInfo [
+
+	<!ELEMENT StudentInfo (Student+)>
+	<!ELEMENT Student (name,prn,age,class,address,contct-no,rollno)>
+	<!ELEMENT name (#PCDATA)>
+	<!ELEMENT prn (#PCDATA)>
+	<!ELEMENT age (#PCDATA)>
+	<!ELEMENT class (#PCDATA)>
+	<!ELEMENT address (#PCDATA)>
+	<!ELEMENT contact-no (#PCDATA)>
+	<!ELEMENT rollno (#PCDATA)>
+
+
+]>
+
+
+<StudentInfo>
+
+	<Student>
+		
+		<name>Rahul</name>
+		<prn>1267164</prn>
+		<age>20</age>
+		<class>BE-III</class>
+		<address>123 1331kodf sf</address>
+		<contact-no>1396124</contact-no>
+		<rollno>1231</rollno>
+
+
+	</Student>
+
+
+	<Student>
+		
+		<name>Rahul</name>
+		<prn>1267164</prn>
+		<age>20</age>
+		<class>BE-III</class>
+		<address>123 1331kodf sf</address>
+		<contact-no>1396124</contact-no>
+		<rollno>1231</rollno>
+
+
+	</Student>
+
+
+	<Student>
+		
+		<name>Rahul</name>
+		<prn>1267164</prn>
+		<age>20</age>
+		<class>BE-III</class>
+		<address>123 1331kodf sf</address>
+		<contact-no>1396124</contact-no>
+		<rollno>1231</rollno>
+
+
+	</Student>
+
+	<Student>
+		
+		<name>Rahul</name>
+		<prn>1267164</prn>
+		<age>20</age>
+		<class>BE-III</class>
+		<address>123 1331kodf sf</address>
+		<contact-no>1396124</contact-no>
+		<rollno>1231</rollno>
+
+
+	</Student>
+
+</StudentInfo>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>server clock</title>
+	<style>
+		body{
+			font-size: 50px;
+			font-family: clock;
+			color: white;
+		}
+		@font-face{
+			font-family: clock;
+			src:url(digital-7.ttf);
+		}
+		@keyframes blink{
+			0%{
+				opacity: 1.0
+			}
+			50%{
+				opacity: 0
+			}
+			100%{
+				opacity: 1.0
+			}
+		}
+
+		#sec{
+			animation: blink infinite linear 1s;
+		}
+	</style>
+
+	<script src="jquery-1.12.4.min.js"></script>
+</head>
+<body style="width: 100vw;height: 100vh;overflow-x: hidden;overflow-y: hidden;background: black">
+
+	
+	<div style="top: 50%;left: 50%;transform: translate(-50%,-50%);position: absolute;text-align: center;">
+		<h1 style="text-align: center;margin: 0;margin-bottom: 10px;">SERVER CLOCK</h1>
+		<span id="date"></span> : <span id="mon"></span> : <span id="year"></span> -- <span id="hour"></span> : <span id="min"></span> : <span id="sec"></span>
+	</div>
+	
+	<script>
+		$(document).ready(function(){
+			setInterval(function(){
+				$.ajax({
+					type:'GET',
+					contentType:'application/json',
+					url:'http://localhost:32349/',
+					success:function(data){
+						$('#date').text(data.date)
+						$('#mon').text(data.month)
+						$('#year').text(data.year)
+						$('#hour').text(data.hour)
+						$('#min').text(data.min)
+						$('#sec').text(data.sec)
+					}
+				})
+			},1000)
+		})
+	</script>
+</body>
+</html>

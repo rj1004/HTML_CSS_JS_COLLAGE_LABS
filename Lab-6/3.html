@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>3.html</title>
+</head>
+<body>
+
+	<h1>Validation</h1>
+	<label for="username">Username</label>
+	<input type="text" name="username" id="username">
+	<br><br>
+	<label for="pass">Password</label>
+	<input type="text" name="pass" id="pass" >
+	<br><br>
+	<span style="color: red" id="hint"></span>&nbsp;&nbsp;
+	<br>
+	<span style="color: red" id="hintpass"></span>
+	<br>
+	<br>
+	<button onclick="submit()">Submit</button>
+	
+
+
+
+	<script>
+		function submit(){
+			var username=document.getElementById('username')
+			var pass=document.getElementById('pass')
+			var hint=document.getElementById('hint')
+
+			validateUser(username.value)
+			validatepass(pass.value)
+			if (validateUser(username.value)) {
+				hint.style.color='green'
+				hint.innerHTML='Username Validation successful'
+			}
+			if (validatepass(pass.value)) {
+				
+				hintpass.innerHTML='password validation successful'
+
+				
+				hintpass.style.color='green'
+			}
+		}
+
+
+
+
+
+
+		function validateUser(s){
+			var string=s.charAt(0)
+
+			if (s.length==0) {
+				hint.style.color='red'
+				hint.innerHTML='username field is empty'
+				return false;
+			}
+			
+			if (string == '@' || string == '_' || (string.charCodeAt(0) <= 57 && string.charCodeAt(0)>=48 )) {
+				hint.style.color='red'
+				hint.innerHTML='Username should not start with either @ or _ or number.'
+				return false;
+			}
+			else{
+				hint.style.color='red'
+				hint.innerHTML=''
+			}
+
+			return true;
+		}
+
+
+
+
+		function validatepass(s){
+			if (s.length==0) {
+				hintpass.style.color='red'
+				hintpass.innerHTML='password field is empty'
+				return false;
+			}
+			else{
+				hintpass.style.color='red'
+				hintpass.innerHTML=''
+			}
+
+			if (s.length>=6 && s.length<=12) {
+
+				return true;
+			}
+			else{
+				hintpass.style.color='red'
+				hintpass.innerHTML='length of password must be in 6 to 12 characters'
+				return false;
+			}
+		}
+	</script>
+</body>
+</html>

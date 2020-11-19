@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<PlayerCollection
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:noNamespaceSchemaLocation="schema1.xsd">
+
+		
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+
+
+		<Player>
+
+			<player-name>KL Rahul</player-name>
+			<player-age>30</player-age>
+			<betting-average>50</betting-average>
+			<highest-score>200</highest-score>
+		</Player>
+		
+</PlayerCollection>

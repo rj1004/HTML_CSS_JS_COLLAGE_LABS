@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cricket-Live-Score</title>
+	<style>
+		td{
+			padding: 10px;
+		}
+		th{
+			padding: 10px;
+		}
+	</style>
+
+</head>
+<body >
+<table style="text-align: center;font-size: 25px;position: absolute;top: 50%;left: 50%;transform: translate(-50%,-50%);width: 90vw;" border="1">
+	<tr>
+		<th colspan="5">Cricket-Sample-Live-Score</th>
+
+	</tr>
+	<tr>
+		<td colspan="1"></td>
+		<td colspan="2" id="team1"></td>
+		<td colspan="2" id="team2"></td>
+	</tr>
+	<tr>
+		<td colspan="1">Run/Wicket</td>
+		<td colspan="2" id="tr1"></td>
+		<td colspan="2" id="tr2"></td>
+
+	</tr>
+	<tr>
+		<td colspan="1">Over</td>
+		<td colspan="2" id="to1"></td>
+		<td colspan="2" id="to2"></td>
+	</tr>
+	<tr>
+		<td colspan="5" id="heading">Headings</td>
+	</tr>
+	<tr>
+		<th colspan="5">Current Batsman</th>
+	</tr>
+	<tr>
+		<th>Name</th>
+		<th>R</th>
+		<th>B</th>
+		<th>F</th>
+		<th>S</th>
+	</tr>
+	<tr>
+		<td id="b1"></td>
+		<td id="b1r"></td>
+		<td id="b1o"></td>
+		<td id="b1f"></td>
+		<td id="b1s"></td>
+	</tr>
+	<tr>
+		<td id="b2"></td>
+		<td id="b2r"></td>
+		<td id="b2o"></td>
+		<td id="b2f"></td>
+		<td id="b2s"></td>
+	</tr>
+	<tr>
+		<th colspan="5">Current Bowler</th>
+	</tr>
+	<tr>
+		<th>Name</th>
+		<th>R</th>
+		<th>M</th>
+		<th>O</th>
+		<th>W</th>
+	</tr>
+	<tr>
+		<td id="bowlern"></td>
+		<td id="bowlerr"></td>
+		<td id="bowlerm"></td>
+		<td id="bowlero"></td>
+		<td id="bowlerw"></td>
+	</tr>
+
+
+</table>	
+
+<script src="jquery-1.12.4.min.js"></script>
+<script>
+	var count=0;
+	$(document).ready(function(){
+		console.log('jello')
+
+		setInterval(function(){
+			count++;
+			if (count%2 ==0) {
+				$('#heading').css('opacity' ,1.0)
+				if(count%3==0){
+					$('#heading').css('color' ,'red')
+				}
+				else if(count%3==1)
+				{
+					$('#heading').css('color' ,'green')
+				}
+				else{
+					$('#heading').css('color' ,'blue')
+				}
+				
+
+			}
+			else{
+				$('#heading').css('opacity',0.0)	
+
+			}
+		},1000)
+
+
+		setInterval(function(){
+			$.ajax({
+				type:'GET',
+				contentType:'application/json',
+				url:'http://localhost:22349/',
+				success : function(data){
+					if(data.length!=0)
+					{
+						console.log(data)
+						$('#team1').text(data.team1)
+						$('#team2').text(data.team2)
+						$('#tr1').text(data.tr1)
+						$('#tr2').text(data.tr2)
+						$('#to1').text(data.to1)
+						$('#to2').text(data.to2)
+						$('#heading').text(data.heading)
+						$('#b1').text(data.b1)
+						$('#b2').text(data.b2)
+						$('#b1r').text(data.b1r)
+						$('#b1o').text(data.b1o)
+						$('#b1f').text(data.b1f)
+						$('#b1s').text(data.b1s)
+						$('#b2r').text(data.b2r)
+						$('#b2o').text(data.b2o)
+						$('#b2f').text(data.b2f)
+						$('#b2s').text(data.b2s)
+						$('#bowlern').text(data.bowlern)
+						$('#bowlerr').text(data.bowlerr)
+						$('#bowlerm').text(data.bowlerm)
+						$('#bowlero').text(data.bowlero)
+						$('#bowlerw').text(data.bowlerw)
+					}
+				}
+			})
+		},4000)
+	})
+</script>
+</body>
+</html>

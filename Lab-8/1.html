@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>1</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body style="margin: 0;padding:0;">
+
+	<div style="background: red;width: 100vw;height: 30vh;" id="hi">
+		
+	</div>
+
+<div style="text-align: center;margin: 20px;">
+	<button style="text-align: center;" onclick="hello()">Click to Toggle</button>
+</div>
+	
+	<script>
+		function hello(){
+			$('#hi').slideToggle(1000,'linear');
+		}
+	</script>
+</body>
+</html>

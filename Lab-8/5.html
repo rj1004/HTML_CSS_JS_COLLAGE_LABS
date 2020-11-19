@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>5</title>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<style>
+		@keyframes walk{
+			0%{
+				background-position:0  0px;
+			}
+			
+			100%{
+				background-position: 0 -600px;
+			}
+			
+		}
+
+		@keyframes fly{
+			0%{
+				background-position: 0px;
+			}
+			100%{
+				background-position: -120px;
+			}
+		}
+	</style>
+</head>
+<body style="margin: 0;padding: 0;height: 100vh;overflow: hidden;" id="body">
+	<img src="ground.png" alt="" style="width: 100vw; bottom: 0;position: absolute;z-index: 999" id="ground">
+	<img src="sun.png" alt="" style="position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);z-index: 4" id="sun">
+	<img src="sun2.png" alt="" style="position: absolute;top: 50%;left:50%;transform: translate(-50%,-50%);" id="sun2">
+	<img src="sky.png" alt="" style="width: 100vw;height: 100vh;opacity: 1;position: absolute;" id="sky" >
+	<img src="clouds.png" alt="" style="position: absolute;" id="cloud">
+	<img src="stars.png" alt="" id="stars" style="opacity: 0">
+	<img src="moon.png" alt="" style="opacity: 0;top:100%;position: absolute;left:50%;transform: translate(-50%,-50%);z-index: 990" id="moon">
+
+	<p style="color: white;position: absolute;top:10%;left:50%;transform: translate(-50%,-50%);font-style: oblique;font-size: 30px;font-weight: bold;opacity: 0" id="text">Made By Rahul</p>
+
+	<div id="dog" style="background: url(ani.png);z-index: 100000;position: absolute;top: 90%;left:80%;width: 100px;height: 50px;animation: walk 2s steps(12) 10;background-repeat: no-repeat;background-size: 100px 600px;"></div>
+
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:30%;left:30%;" id="f1"></div>
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:20%;left:50%;" id="f2"></div>
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:34%;left:80%;" id="f3"></div>
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:10%;left:10%;" id="f4"></div>
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:76%;left:24%;" id="f5"></div>
+	<div style="position: absolute;background: url(bird.png);width: 30px;height: 30px;background-repeat: no-repeat;background-size: 120px 100%;animation: fly 0.5s steps(4) infinite;top:70%;left:60%;" id="f6"></div>
+
+	<div style="background: url(fall.png);position: absolute;top: -10%;left: 0;z-index: 999999;width: 100px;height: 100px;background-repeat: no-repeat;background-size: 100%;opacity: 0.5;z-index: 995" id="fall"></div>
+
+
+	<script>
+		$('#sun').animate({top:'100%',opacity:'0'},10000)
+		$('#sun2').animate({top:'100%'},10000,function(){
+			$('#body').css('background','black')
+			$('#sky').animate({opacity:'0'})
+			$('#stars').animate({opacity:'1'},2000)
+			$('#moon').animate({opacity:'1',top:'50%'},10000,function(){
+				$('#fall').animate({opacity:'1',top:'100%',left:'80%'},5000)
+				$('#text').animate({opacity:'1'},2000)
+			})
+		})
+		
+
+		$('#f1').animate({top:'-10%',left:'20%'},10000)
+		$('#f2').animate({top:'40%',left:'150%'},10000)
+		$('#f3').animate({top:'-10%',left:'80%'},10000)
+		$('#f4').animate({top:'60%',left:'110%'},10000)
+		$('#f5').animate({top:'-10%',left:'40%'},10000)
+		$('#f6').animate({top:'-10%',left:'100%'},10000)
+		$('#cloud').animate({left:'100%'},10000)
+		$('#dog').animate({left:'-10%'},20000)
+		
+
+		
+
+	</script>
+</body>
+</html>
